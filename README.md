@@ -3,7 +3,7 @@
 The repo contains a simple bash script to run a python code on the llac cluster.
 
 
-##Script usage:
+## Script usage:
 
 To submit your job:
 
@@ -15,7 +15,7 @@ To check jobs in the cluster:
 
 To check your jobs:
 
-    squeue --users=cobo
+    squeue --users=<user_name>
 
 To cancel your jobs:
 
