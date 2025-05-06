@@ -13,8 +13,11 @@ This folder contains 3 different scripts to submit jobs to the cluster. Although
 -# module load python/3.8 : I am assuming this and subsequent line allow you to indicate the cluster the programming languages you are running your code on.
 
 
-##slurm_script.sh
+## slurm_script.sh
 
-This is the simplest script. It submits a number of jobs (10) that are related to the first external argument required by my code. In my case, this external argument takes values between 0 and 9, so this script allows me to do a whole run on this variable.
+This is the simplest script. It submits a number of jobs (10, in my case) that are tied to the first external argument required by my code. In my case, this external argument takes values between 0 and 9, so this script allows me to do a whole run on this variable of my experiments. The index of the job ($SLURM_ARRAY_TASK_ID) substitutes the value of the external argument.
 
-##slurm_array.sh
+## slurm_array.sh
+
+In my case, it is common that some of the jobs I submit get stuck and do not finish running. If I ran those jobs with the first script, I will have some scattered jobs unfinished that I need to run again (often several times). I use this script on those cases.
+The trick is to declare an associative array (a dictionary in python language), where the keys are the indices of the jobs that I want to submti again, and the values are strings containing the values of all the external parameters of the jobs that got stuck. In this case, 
