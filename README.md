@@ -13,9 +13,20 @@ To check jobs in the cluster:
 
     squeue
 
-To check your jobs:
+To check your specific jobs:
 
     squeue --users=<user_name>
+
+In both cases, the terminal will show a list with different columns:
+
+*JOBID: The id number assigned to your job (see scripts/)
+*PARTITION
+*NAME: The name you assigned to the job (see scripts/)
+*USER:
+*ST: Status of your job. 'R' stands for running, 'PD' stands for pending. Check [here](https://confluence.cscs.ch/spaces/KB/pages/278036745/Meaning+of+Slurm+job+state+codes) for other statuses.
+*TIME
+*NODES
+*NODELIST(REASON)
 
 To cancel your jobs:
 
