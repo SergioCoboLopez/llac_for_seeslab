@@ -9,7 +9,7 @@
 #SBATCH --time=1-12:00:00
 
 #declare an associative array
-declare -A test=([11]="2 tanh 0.0 1"
+declare -A job_array=([11]="2 tanh 0.0 1"
 [12]="3 tanh 0.0 1"
 [13]="4 tanh 0.0 1"
 [14]="5 tanh 0.0 1"
@@ -28,11 +28,11 @@ declare -A test=([11]="2 tanh 0.0 1"
 [27]="8 tanh 0.0 2"
 [28]="9 tanh 0.0 2")
 
-echo "This is running ${test[$SLURM_ARRAY_TASK_ID]}"
+echo "This is running ${job_array[$SLURM_ARRAY_TASK_ID]}"
 
 
 # Load required modules (if needed)
 # module load python/3.8
 
 #Your job commands go here
-python3 get_trace.py ${test[$SLURM_ARRAY_TASK_ID]} 0
+python3 get_trace.py ${job_array[$SLURM_ARRAY_TASK_ID]} 0
