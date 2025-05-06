@@ -1,4 +1,4 @@
-### Scripts
+## Scripts
 This folder contains 3 different scripts to submit jobs to the cluster. Although I use different script for different purposes, they share many common instructions:
 
 * #SBATCH --job-name=test : indicates the name of the job.
@@ -10,14 +10,14 @@ This folder contains 3 different scripts to submit jobs to the cluster. Although
 * #SBATCH --mem=1GB : Memory assigned for your jobs
 * #SBATCH --time=1-12:00:00: Maximum time allowed for each task. You might want to stop running a job after a certain time. This can happen with the BMS sometimes.
 
-* # module load python/3.8 : I am assuming this and subsequent line allow you to indicate the cluster the programming languages you are running your code on.
+* #module load python/3.8 : I am assuming this line indicates the cluster the programming languages you are running your code on.
 
 
-## slurm_script.sh
+### slurm_script.sh
 
 This is the simplest script. It submits a number of jobs (10, in my case) that are tied to the first external argument required by my code. In my case, this external argument takes values between 0 and 9, so this script allows me to do a whole run on this variable of my experiments. The index of the job ($SLURM_ARRAY_TASK_ID) substitutes the value of the external argument.
 
-## slurm_array.sh
+### slurm_array.sh
 
 In my case, it is common that some of the jobs I submit get stuck and do not finish running. If I ran those jobs with the first script, I will have some scattered jobs unfinished that I need to run again (often several times). I use this script on those cases.
 
@@ -25,7 +25,7 @@ The trick is to declare an associative array (a dictionary in python language) t
 
 This is not an elegant solution, but it does the trick for me.
 
-## slurm_multirun.sh
+### slurm_multirun.sh
 
 Certain jobs can get stuck multiple times. When that happens, I submit that specific job multiple times. This is what the last external argument of my code accounts for. This script is just a variation of the first one, where I simply put the index in the last position.
 
