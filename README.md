@@ -23,7 +23,7 @@ In both cases, the terminal will show a list with different columns:
 * PARTITION
 * NAME: The name you assigned to the job (see scripts/)
 * USER:
-* ST: Status of your job. 'R' stands for running, 'PD' stands for pending. Check [here](https://confluence.cscs.ch/spaces/KB/pages/278036745/Meaning+of+Slurm+job+state+codes) for other statuses.
+* ST: Status of your job. 'R' stands for running, 'PD' stands for pending. Check [here](https://confluence.cscs.ch/spaces/KB/pages/278036745/Meaning+of+Slurm+job+state+codes) for other status codes.
 * TIME
 * NODES
 * NODELIST(REASON)
