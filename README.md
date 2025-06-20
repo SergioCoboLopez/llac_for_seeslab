@@ -36,6 +36,8 @@ For more information, check the [documentation](https://slurm.schedmd.com/docume
 
 ## Acessing the cluster:
 
+If you don't have an account in the cluster, contact the system administrator and ask for one. You should get a user name and a password to access the cluster:
+
     ssh <your_user_name>@10.112.11.131
 
 ## Sending information to the cluster:
