@@ -46,16 +46,14 @@ Copy files from your local computer to the cluster:
 
      scp <file_name>  <user_name>@10.112.11.131:/home/sees/<user_name>/<destination_path>
 
-Copy folders from the seeslab server to the cluster:
+Copy folders from from your local computer to the cluster:
 
     scp -r <folder_name> <user_name>@10.112.11.131:/home/sees/<user_name>/<destination_path>
 
-If this does not work, try copying the files from your local computer to seeslab server first:
+If this does not work, try copying the files from your local computer to the seeslab server first:
 
     scp <file_name>  <user_name>@10.30.41.62:<destination_path>
     
-Copy folders from your local computer to seeslab server:
-
     scp -r <folder_name> <user_name>@10.30.41.62:<destination_path>
 
 ## Sending information to your local computer
@@ -69,7 +67,5 @@ Copy files/folders to your local computer:
 If this does not work, try copying files to the seeslab server first:
 
     scp <file_name> <user_name>@10.30.41.62:<destination_path>
-
-Copy folders to the seeslab server:
 
     scp -r <folder_name> <user_name>@10.30.41.62:<destination_path>
