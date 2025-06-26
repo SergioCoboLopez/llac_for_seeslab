@@ -42,7 +42,15 @@ If you don't have an account in the cluster, contact the system administrator an
 
 ## Sending information to the cluster:
 
-Copy files from your local computer to seeslab server:
+Copy files from your local computer to the cluster:
+
+     scp <file_name>  <user_name>@10.112.11.131:/home/sees/<user_name>/<destination_path>
+
+Copy folders from the seeslab server to the cluster:
+
+    scp -r <folder_name> <user_name>@10.112.11.131:/home/sees/<user_name>/<destination_path>
+
+If this does not work, try copying the files from your local computer to seeslab server first:
 
     scp <file_name>  <user_name>@10.30.41.62:<destination_path>
     
@@ -50,28 +58,18 @@ Copy folders from your local computer to seeslab server:
 
     scp -r <folder_name> <user_name>@10.30.41.62:<destination_path>
 
-Copy files from the seeslab server to the cluster:
-
-    scp <file_name>  <user_name>@10.112.11.131:/home/sees/<user_name>/<destination_path>
-
-Copy folders from the seeslab server to the cluster:
-
-    scp -r <folder_name> <user_name>@10.112.11.131:/home/sees/<user_name>/<destination_path>
-
 ## Sending information to your local computer
-
-Copy files to the seeslab server:
-
-    scp <file_name> <user_name>@10.30.41.62:<destination_path>
-
-Copy folders to the seeslab server:
-
-    scp -r <folder_name> <user_name>@10.30.41.62:<destination_path>
-
-
 
 Copy files/folders to your local computer:
 
     scp <file_name> <user_name>@10.30.41.xyz:<destination_path>
 
     scp -r <folder_name> <user_name>@10.30.41.xyz:<destination_path>
+
+If this does not work, try copying files to the seeslab server first:
+
+    scp <file_name> <user_name>@10.30.41.62:<destination_path>
+
+Copy folders to the seeslab server:
+
+    scp -r <folder_name> <user_name>@10.30.41.62:<destination_path>
