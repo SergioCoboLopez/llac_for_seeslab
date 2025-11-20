@@ -60,9 +60,9 @@ If this does not work, try copying the files from your local computer to the see
 
 Copy files/folders to your local computer:
 
-    scp <file_name> <user_name>@10.112.36.xyz:<destination_path>
+    scp <user_name>@llac.dqfi.urv.cat:<file_name> <destination_path>
 
-    scp -r <folder_name> <user_name>@10.112.36.xyz:<destination_path>
+    scp -r <user_name>@llac.dqfi.urv.cat:<folder_name> <destination_path>
 
 If this does not work, try copying files to the seeslab server first:
 
